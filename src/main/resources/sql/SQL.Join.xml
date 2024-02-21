@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.feb.jdbc.dao.LoginDao">
+	
+	<!-- public int join(HashMap<String, String> params); -->
+	<insert id="join" parameterType="java.util.HashMap">
+		INSERT INTO lecture.member(member_id, passwd, member_name)
+		VALUES(
+		#{id},
+		#{passWd},
+		#{name},
+		)
+	</insert>
+
+</mapper>
